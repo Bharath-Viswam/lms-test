@@ -1,0 +1,10 @@
+
+.backg{
+    background-image: url('../../../assets/images/afif-kusuma-D1z3dwROc44-unsplash.jpg');
+    background-size: cover;
+    height: 1200px;
+    opacity: 90%;
+}
+h3{
+    padding: 20px;
+}

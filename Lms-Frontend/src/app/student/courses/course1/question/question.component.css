@@ -1,0 +1,22 @@
+.card{
+    max-width:880px;
+    margin:0 auto;
+    padding:10px;
+}
+li{
+    list-style-type: none;
+    cursor:pointer;
+    margin:10px ;
+
+}
+li.list:hover{
+    border:2px solid green;
+}
+ol{
+    padding: 0;
+}
+.evaltag{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:crimson
+}

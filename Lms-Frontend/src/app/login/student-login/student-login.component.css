@@ -1,0 +1,50 @@
+img{
+    position: relative;
+     width: 100%; 
+      min-height:100vh;
+      height: 600px;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+
+h1{
+    text-align: center;
+     padding-bottom: 10px;
+    color: white ;
+}
+.top h1{
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    color:darkblue;
+  }
+  .top h3{
+        position: absolute;
+        top: 100px;
+        left: 32%;
+        color: darkblue;
+  }
+
+form{
+    
+    position: absolute;
+    top: 23%;
+    margin-left: 29%;
+    margin-right: 20%;
+    width: 30%;
+    
+   padding:40px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+   border-radius: 7px;
+   background-color: white;
+   letter-spacing: 0.5px;
+   background-color: rgb(39, 12, 88);
+}
+
+a{
+    font-size: large;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+   }

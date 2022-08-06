@@ -1,0 +1,62 @@
+<app-adm-nav></app-adm-nav>
+<h1 style="text-align:center;">{{title}}</h1>
+
+     <div style="margin-top: 50px;" class="col-lg-12 container-fluid">
+        <div class="table-responsive table-bordered">
+            <table class="table table-hover">
+                <thead style="text-align:center;">
+                    <tr class="table-primary" >
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Qualification</th>
+                        <th>Skill Set</th>
+                        <th>Teaching Experience</th>
+                        <th>Couses</th>
+                        <th>Couse Id</th>
+                        <th>Batch Id</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr *ngFor="let trainer of trainers">
+                                 <td>{{trainer.trainername}}</td>
+                                 <td>{{trainer.traineraddress}}</td>
+                                 <td>{{trainer.traineremail}}</td>
+                                 <td>{{trainer.trainerph}}</td>
+                                 <td>{{trainer.traineredu}}</td>
+                                 <td>{{trainer.trainerskill}}</td>
+                                 <td>{{trainer.trainerexp}}</td>
+                                 <td>{{trainer.tracours}}</td>
+                                 <td> 
+                                    <select class="form-control" name="tracouid" id="tracouid" #tracouid="ngModel" [(ngModel)]="trainerdtls.tracouid"  required>
+                                      <option value="" disabled>CourseId</option>
+                                      <option value="FSD">FSD</option>
+                                      <option value="DSA">DSA</option>
+                                      <option value="CSA">CSA</option>
+                                      </select></td>
+                                          
+                                      <td> 
+                                        <select class="form-control" name="tracoubtch" id="tracoubtch" #tracoubtch="ngModel" [(ngModel)]="trainerdtls.tracoubtch"  required>
+                                          <option value="" disabled>BatchId</option>
+                                          <option value="001">001</option>
+                                          <option value="002">002</option>
+                                          <option value="BOTH">BOTH</option>
+                                          </select></td>
+                               
+                                    <td>
+                                        <button class="btn btn-success" (click)="approveTrainer(trainer)" >APPROVE</button>
+                                    </td> 
+                                    <td>
+                                       <button class="btn btn-danger" (click)="declineTrainer(trainer)">DECLINE</button>
+                                   </td>       
+                    </tr>
+                </tbody>
+             </table>
+             </div>  
+             <div *ngIf="nodata" class="alert alert-info" role="alert">
+                No new tariner is there for approval. 
+                </div>
+</div>

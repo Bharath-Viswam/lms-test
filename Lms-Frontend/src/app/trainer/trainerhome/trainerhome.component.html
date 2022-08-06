@@ -1,0 +1,49 @@
+
+<nav class="navbar navbar-expand-lg bg-warning">
+  <div class="container-fluid">
+    <a class="navbar-brand">TRAINER</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+        
+       </ul>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" routerLink="/tralogin" type="submit" *ngIf="!testService.getTokenTrainer()">Login</button>
+        <button class="btn btn-outline-success" (click)="logoutTrainer()"  type="submit" *ngIf="testService.getTokenTrainer()">Signout</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- <div class="p-3 mb-2 bg-warning text-white"><h1 class="headtag">TRAINER</h1></div> -->
+<div class="card card-2 mt-5 ">
+    <div class="card__icon"><i class="fas fa-bolt"></i></div>
+    <p class="card__exit"><i class="fas fa-times"></i></p>
+    <!-- <h2 class="card__title">Exams</h2> -->
+    <p class="card__apply">
+      <a class="card__link" routerLink="/trainer/fsdcourse"><h2 class="headtag">Full Stack Development(MEAN)</h2> <i class="fas fa-arrow-right"></i></a>
+    </p>
+  </div>
+  <div class="card card-2 mt-5 ">
+    <div class="card__icon"><i class="fas fa-bolt"></i></div>
+    <p class="card__exit"><i class="fas fa-times"></i></p>
+    <!-- <h2 class="card__title">Exams</h2> -->
+    <p class="card__apply">
+      <a class="card__link" routerLink="/trainerdsa"><h2 class="headtag">Certified Specialist in Data Science & Analytics</h2> <i class="fas fa-arrow-right"></i></a>
+    </p>
+  </div>
+  <div class="card card-2 mt-5 ">
+    <div class="card__icon"><i class="fas fa-bolt"></i></div>
+    <p class="card__exit"><i class="fas fa-times"></i></p>
+    <!-- <h2 class="card__title">Exams</h2> -->
+    <p class="card__apply">
+      <a class="card__link" routerLink="/trainercsa"><h2 class="headtag">Certified Specialist in Cyber Security Analyst</h2> <i class="fas fa-arrow-right"></i></a>
+    </p>
+  </div>
+ 
+
+
+

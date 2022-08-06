@@ -1,0 +1,29 @@
+h1{
+    /* position: absolute; */
+   margin-top: 30px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkblue;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+    /* background-color: white; */
+}
+form{
+   /* position: absolute; */
+   margin-top: 40%;
+    width: 75%;
+    height: 60%;
+    margin-left:12%;
+   
+}
+.table{
+    
+    border: 1px solid brown;
+padding: 40px;
+padding-bottom: 20px;
+
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}

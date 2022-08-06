@@ -1,0 +1,37 @@
+<h1>LEARNING MATERIAL</h1>
+ <!-- get learning materials -->
+ 
+
+
+ <div class="card">
+   <div class="card-body">
+       <div class="table-responsive table-bordered">
+           <table class="table table-hover">
+               <thead>
+                   <tr class="table-primary" >
+                      
+                       <th>TITLE</th>
+                       <th>URL</th>
+                       <th>Material</th>
+                       <th>Description</th>
+                       
+                       
+                   </tr>
+               </thead>
+               <tbody>
+                <tr *ngFor="let material of materials">
+                    <td>{{material.title}}</td>
+                    <td><a href="{{material.url}}">{{material.url}}</a> </td>
+                   
+                    <td><a href="../../../../../assets/uploads/{{material.file}}"> {{material.file}}</a></td>
+                    <td>{{material.desc}}</td>
+                     </tr>   
+                      
+                
+               </tbody>
+            </table>
+            </div>  
+   </div>
+</div>
+
+

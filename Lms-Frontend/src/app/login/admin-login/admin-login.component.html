@@ -1,0 +1,58 @@
+<div class="back">
+  <img class="img-fluid img" [src]="image">
+ 
+<div class="login">
+  <div class="top">
+    <h1>LMS</h1>
+    <h3>Your gateway to success</h3>
+  </div>
+    <form  #adLogin="ngForm" (ngSubmit)="adminLogin()">
+      <h1 class="title mb-3 fw-normal">LOGIN</h1>
+      <div class="mb-3">
+        <!-- <label for="exampleInputEmail1" class="form-label">email id</label> -->
+        <input type="text"
+         class="form-control"
+         id="admineusername"
+         name="admineusername"
+         [(ngModel)]="Admin.admineusername"
+         #admineusername="ngModel"
+          placeholder="Username"
+          [class.is-invalid]="admineusername.invalid && admineusername.touched"
+         pattern="admin"
+          required>
+          <!-- validation -->
+          <small class="text-danger"   *ngIf="admineusername.touched && !admineusername.valid">
+            <div *ngIf="admineusername.errors?.['required']">
+              Username is required
+                </div>
+            <div *ngIf="admineusername.errors?.['pattern']">
+                Ender valid user name
+                </div></small>
+      </div>
+      <div class="mb-3">
+        <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+        <input type="password"
+         class="form-control"
+         id="adminepwd"
+         name="adminepwd"
+         [(ngModel)]="Admin.adminepwd"
+         #adminepwd="ngModel"
+           placeholder="Password"
+           [class.is-invalid]="adminepwd.invalid && adminepwd.touched"
+         pattern="admin@123"
+          required>
+          <!-- validation -->
+          <small class="text-danger"   *ngIf="adminepwd.touched && !adminepwd.valid">
+            <div *ngIf="adminepwd.errors?.['required']">
+             Password is required
+                </div>
+            <div *ngIf="adminepwd.errors?.['pattern']">
+                Ender valid password
+                </div></small>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn  btn-primary" [disabled]="adLogin.form.invalid">LOGIN</button>
+      </div>
+      </form>
+    </div>
+</div>

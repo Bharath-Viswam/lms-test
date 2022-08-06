@@ -1,0 +1,168 @@
+<div class="back">
+  <img class="img-fluid" [src]="image1"  >
+  <div class="top">
+  <h1>LMS</h1>
+  <h3>Your gateway to success</h3>
+</div>
+<div class="all">
+    <form class="form col-sm-6" #stuSignup="ngForm"  (ngSubmit)="studentSignup()">
+      <h1 class="title">Create An Account</h1>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <!-- name -->
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" 
+         class="form-control" 
+         id="name"
+         name="studentname"
+         [(ngModel)]="Student.name"
+         #studentname="ngModel"
+         placeholder="Full name"
+         [class.is-invalid]="studentname.invalid && studentname.touched"
+         pattern="[A-Za-z\s]{2,15}"
+         required>
+         <!-- name validation -->
+         <small class="text-danger" [class.d-none]="studentname.valid || studentname.untouched">Ender valid name</small>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <!-- email id -->
+          <label for="exampleInputEmail1" class="form-label">Email Id</label>
+          <input type="email"
+           class="form-control" 
+           id="email" 
+           name="studentemail"
+           [(ngModel)]="Student.email"
+           #studentemail="ngModel"
+           placeholder="Ender email id"
+           [class.is-invalid]="studentemail.invalid && studentemail.touched"
+       pattern="^[a-zA-z0-9\.%_-]+@[a-zA-Z0-9%_]+\.[a-z]{2,4}(.[a-z]{2,3})?"
+       required>
+       <!-- email validation -->
+       <small class="text-danger" *ngIf="studentemail.touched && !studentemail.valid">
+        <div *ngIf="studentemail.errors?.['required']">
+          Email Is Required
+            </div>
+        <div *ngIf="studentemail.errors?.['pattern']">
+             Enter valid email address
+            </div></small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <!-- address -->
+            <label for="exampleInputEmail1" class="form-label">Adress</label>
+            <input type="text"
+             class="form-control" 
+             id="address"
+             name="studentaddress"
+             [(ngModel)]="Student. address"
+             #studentaddress="ngModel"
+             placeholder="Ender adress"
+             [class.is-invalid]="studentaddress.invalid && studentaddress.touched"
+             pattern="[A-Za-z\s0-9,.()]{2,200}"
+             required>
+             <!-- address validation -->
+             <small class="text-danger" [class.d-none]="studentaddress.valid || studentaddress.untouched">Ender valid address</small>
+          </div>
+          
+         
+          <!-- phone number -->
+          <div class="col-md-4 col-sm-12">
+            <label for="exampleInputEmail1" class="form-label">Phone No</label>
+            <input type="text" 
+            class="form-control" 
+            id="phone"
+            name="studentph"
+             [(ngModel)]="Student.ph"
+             #studentph="ngModel"
+             placeholder="Ender phone no"
+             [class.is-invalid]="studentph.invalid && studentph.touched"
+             pattern="[0-9\s]{10,10}"
+             required>
+             <!-- phone number validation -->
+             <small class="text-danger" *ngIf="studentph.touched && !studentph.valid">
+              <div *ngIf="studentph.errors?.['required']">
+                MobileNo Is Required
+                  </div>
+              <div *ngIf="studentph.errors?.['pattern']">
+                   Enter Valid MobileNo
+                  </div></small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <!-- qualification -->
+            <label for="exampleInputEmail1" class="form-label">Highest Qualification</label>
+            <input type="text" 
+            class="form-control"
+             id="education" 
+             name="studentedu"
+             [(ngModel)]="Student.edu"
+             #studentedu="ngModel"
+             placeholder="Ender highest qualification"
+             [class.is-invalid]="studentedu.invalid && studentedu.touched"
+             required pattern="[A-Za-z\s0-9\+.]{2,25}"
+             required>
+             <!-- qualification validation -->
+             <small class="text-danger" [class.d-none]="studentedu.valid || studentedu.untouched">Enter valid qualification</small>
+          </div>
+          <!-- couses -->
+          <div class="col-md-6 col-sm-12">
+            <label for="courses">Courses</label>
+            <select class="form-control" name="courses" id="courses" #courses="ngModel" [(ngModel)]="Student.courses"   required>
+              <option value="" disabled>Choose Course</option>
+              <option value="Full Stack Development">Fullstack Development</option>
+              <option value="Data Science and analytics">Data Science and analytics</option>
+              <option value="Cyber Security Analyst">Cyber Security</option>
+              </select>
+              <!-- course validation -->
+              <small class="text-danger" [class.d-none]="courses.valid || courses.untouched">Please choose a course</small>
+          </div>
+        </div>
+         <!-- password -->
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password"
+           class="form-control" 
+           id="pwd"
+           name="studentpwd"
+             [(ngModel)]="Student.pwd"
+             #studentpwd="ngModel"
+             pattern="(?=^.{6,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+             [class.is-invalid]="studentpwd.invalid && studentpwd.touched"
+             placeholder="Ender Password"
+             required>
+             <!-- password validation -->
+             <small class="text-danger"   *ngIf="studentpwd.touched && !studentpwd.valid">
+              <div *ngIf="studentpwd.errors?.['required']">
+               Password is required
+                  </div>
+              <div *ngIf="studentpwd.errors?.['pattern']">
+                Password must contain atleast 1 capital letter,1 small letter,1 digit and 1 special character and require minimum 6 characters
+                  </div></small>
+                </div>
+                  <!-- retype password -->
+                  <!-- <div class="mb-3">
+                    <label  class="form-label">Re-type Password</label>
+                    <input type="password"
+                     class="form-control" 
+                     id="repwd"
+                     name="studentrepwd"
+                       [(ngModel)]="Student.repwd"
+                       #studentrepwd="ngModel"
+                       placeholder="Re-type Password"
+                       [class.is-invalid]="studentrepwd.invalid && studentrepwd.touched" 
+                       required
+                       pattern="{{stuSignup.value.pwd}}"
+                       min="{{stuSignup.value.pwd}}" max="{{stuSignup.value.pwd}}">
+                       <small class="text-danger" [class.d-none]="studentrepwd.valid || studentrepwd.untouched">Password must be same</small>
+                  </div> -->
+        
+        <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary" [disabled]="stuSignup.form.invalid">Join Now</button>
+      </div>
+      <br>
+      <a routerLink="/stulogin">Already have an account?</a>
+      </form>
+    </div>
+  </div>

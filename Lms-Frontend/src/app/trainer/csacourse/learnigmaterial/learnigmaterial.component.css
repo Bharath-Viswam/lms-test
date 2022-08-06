@@ -1,0 +1,32 @@
+h1{
+    position: absolute;
+    margin-top: 30px;
+    left: 30%;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkblue;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+    /* background-color: white; */
+}
+/* form{
+   position: absolute;
+   top: 40%;
+    width: 75%;
+    height: 60%;
+    margin-left:12%;
+   
+} */
+.table{
+    
+    border: 1px solid brown;
+padding: 40px;
+top: 30%;
+padding-bottom: 20px;
+background-color: lavender;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.card{
+    margin-top: 10%;
+}

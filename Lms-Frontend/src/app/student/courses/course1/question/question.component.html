@@ -1,0 +1,88 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="d-flex justify-content-between p-3">
+           </div>
+           
+            <ng-container *ngIf="!isQuizCompleted">
+            <div class="quiz-header">
+                <h2 style="font-family:cursive">Angular and Typescript exam</h2>
+                <span style="font-style:italic">Welcome {{name}}</span>
+            </div>
+        
+        <div class="d-flex justify-content-between py-3">
+            <div class="score">
+                <h5>{{points}}</h5>
+            </div>
+            <div class="question-remain">
+                <span style="font-style:italic;">Question {{currentQuestion}} of {{questionList.length}}</span>
+            </div>
+            <div class="timer">
+               <h5>{{counter}}sec</h5> 
+            </div>
+            <div>
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              </div></div>
+
+              <div class="question">
+                <div class="card">
+                    <h2>{{questionList[currentQuestion]?.questionText}}</h2>
+                </div>
+
+              </div>
+              <div class="options">
+                <ol *ngFor="let option of questionList[currentQuestion]?.options">
+                    <li (click)="answer(currentQuestion+1,option)"class="list"><div class="card">
+                     {{option.text}}
+                        </div>
+                    </li>
+                    
+                </ol>
+
+              </div>
+              <div class="d-flex justify-content-between">
+                <button [disabled]="currentQuestion===0"class="btn-warning" (click)="previousQuestion()">Previous</button>
+                <button class="btn-warning" (click)="resetQuiz()">Refresh</button>
+                <button [disabled]="currentQuestion==9"class="btn-warning" (click)="nextQuestion()">Next</button>
+              </div>
+             
+            </ng-container>
+            <ng-container *ngIf="isQuizCompleted">
+                <div class="row d-flex justify-content-between">
+                    <div class="result text-center col-md-6 col-sm-12">
+                        <h1 class="evaltag">Evaluation</h1>
+                       <h3>You have completed the exam</h3> 
+                       <!-- <p>Total Question Attempted:{{questionList.length}}</p>
+                        <p>Total Correct Answered:{{correctAnswer}}</p>
+                        <p>Total Wrong Answered:{{incorrectAnswer}}</p>
+                        <p>Your score:{{points}}</p> -->
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Course</th>
+                                <th scope="col">Total Question Attempted</th>
+                                <th scope="col">Total Correct Answered</th>
+                                <th scope="col">Total Wrong Answered</th>
+                                <th scope="col">Your score</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">{{name}}</th>
+                                <th>{{course}}</th>
+                               <th>{{questionList.length}}</th>
+                                <td>{{correctAnswer}}</td>
+                                <td>{{incorrectAnswer}}</td>
+                                <td>{{points}}</td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                       <button (click)="onTransfer()">Submit</button> 
+                        
+                    </div>
+                </div>
+            </ng-container>
+          </div>

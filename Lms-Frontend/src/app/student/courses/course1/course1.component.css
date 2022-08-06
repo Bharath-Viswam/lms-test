@@ -1,0 +1,10 @@
+.backg{
+    background-image: url('../../../../assets/images/fsd2.png');
+    background-size: cover;
+    height: 768px;
+}
+.backg h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+}

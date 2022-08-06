@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid">
+
+        <a class="navbar-brand">LMS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+            </ul>
+            <form class="d-flex" role="search">
+                <button class="btn btn-warning" routerLink="/stulogin" type="submit"
+                    *ngIf="!testService.getTokenStudent()">Login</button>
+                <button class="btn btn-success" (click)="logoutStudent()" type="submit"
+                    *ngIf="testService.getTokenStudent()">Signout</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<!-- <a class="navbar-brand">LMS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+            </ul>
+            <form class="d-flex" role="search">
+                <button class="btn btn-outline-success" (click)="logoutStudent()" type="submit">Signout</button>
+            </form>
+        </div>
+    </div>
+</nav> -->
+
+
+
+
+
+
+
+<div class="backg">
+    <div class="cards">
+        <div class="card card-1">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title">Certified Specialist in Full Stack Development</h2>
+            <p class="card__apply">
+                <a class="card__link" routerLink="course1">Get In <i class="fas fa-arrow-right"></i></a>
+            </p>
+        </div>
+        <div class="card card-2">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title">Certified Specialist in Software Testing</h2>
+            <p class="card__apply">
+                <a class="card__link" routerLink="course2">Get In <i class="fas fa-arrow-right"></i></a>
+            </p>
+        </div>
+        <div class="card card-3">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title"> Certified Specialist in Data Science & Analytics</h2>
+            <p class="card__apply">
+                <a class="card__link" routerLink="course3">Get In <i class="fas fa-arrow-right"></i></a>
+            </p>
+        </div>
+        <div class="card card-4">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title">Certified Specialist in Cyber Security Analyst</h2>
+            <p class="card__apply">
+                <a class="card__link" routerLink="course4">Get In <i class="fas fa-arrow-right"></i></a>
+            </p>
+        </div>
+    </div>
+
+
+</div>

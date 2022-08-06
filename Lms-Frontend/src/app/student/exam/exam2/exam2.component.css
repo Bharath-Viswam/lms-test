@@ -1,0 +1,18 @@
+
+form{
+    margin-left:2rem;
+    margin-right:2rem;
+    padding-bottom:2rem;
+    padding-top:2rem;
+   
+    
+}
+p{
+  color:white;  
+}
+.backg{
+    background-image: url('../../../../assets/images/yustinus-tjiuwanda-BCBGahg0MH0-unsplash.jpg');
+    background-size: cover;
+    height: 1200px;
+    opacity: 90%;
+}

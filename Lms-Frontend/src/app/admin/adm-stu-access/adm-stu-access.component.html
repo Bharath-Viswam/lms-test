@@ -1,0 +1,64 @@
+<app-adm-nav></app-adm-nav>
+
+<h1 style="text-align:center;">{{title}}</h1>
+
+     <div style="margin-top: 50px;" class="col-lg-12 container-fluid">
+        <div class="table-responsive table-bordered">
+            <table class="table table-hover">
+                <thead style="text-align:center;">
+                    <tr class="table-primary" >
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Qualification</th>
+                        <th>Couses</th>
+                        <th>Batch Id</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr *ngFor="let student of students">
+                                 <td>{{student.studentname}}</td>
+                                 <td>{{student.studentaddress}}</td>
+                                 <td>{{student.studentemail}}</td>
+                                 <td>{{student.studentph}}</td>
+                                 <td>{{student.studentedu}}</td>
+                                 <td>{{student.stucours}}</td>
+                                 <td> 
+                                    <select class="form-control" name="tracouid" id="tracouid" #tracouid="ngModel" [(ngModel)]="studentls.stucouid"  required>
+                                      <option value="" disabled>CourseId</option>
+                                      <option value="FSD001">FSD001</option>
+                                      <option value="DSA001">DSA001</option>
+                                      <option value="CSA001">CSA001</option>
+                                      <option value="FSD002">FSD002</option>
+                                      <option value="DSA002">DSA002</option>
+                                      <option value="CSA002">CSA002</option>
+                                      </select></td>
+
+                               
+                                    <td>
+                                 <td>
+                                    <td>
+                                        <button class="btn btn-success" (click)="approveStudent(student)">APPROVE</button>
+                                    </td> 
+                                    <td>
+                                       <button class="btn btn-danger" (click)="declineStudent(student)">DECLINE</button>
+                                   </td>       
+                    </tr>
+                    
+                      
+                  
+                    
+                </tbody>
+                
+             </table>
+             <div *ngIf="nodata"  class="alert alert-info" role="alert">
+                No new student is there for approval. 
+                </div>
+             </div>  
+             
+</div>

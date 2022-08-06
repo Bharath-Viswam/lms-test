@@ -1,0 +1,12 @@
+.backg{
+    background-image: url('../../../../assets/images/fly-d-zAhAUSdRLJ8-unsplash.jpg');
+    background-size: cover;
+    height: 760px;
+   
+    
+}
+.backg h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+}

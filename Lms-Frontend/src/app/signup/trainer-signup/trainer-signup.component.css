@@ -1,0 +1,59 @@
+img{
+    position: relative;
+     width: 100%; 
+      min-height:100vh;
+      height: 850px;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+ 
+   }  
+  .top h1{
+    position: absolute;
+    top: 20px;
+    left: 46%;
+    color:darkblue;
+    background-color: white;
+  }
+  .top h3{
+      bottom: 20px;
+        position: absolute;
+        top: 80px;
+        left: 38%;
+        color: darkblue;
+        background-color: white;
+  }
+.title{
+   
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+label{
+    margin:10px;
+    font-weight: bold;
+}
+
+form{
+   position: absolute;
+   top: 55px;
+    margin-left: 28%;
+    margin-right: 20%;
+    margin-top: 6%;
+    margin-bottom: 5%;
+    width: 43%;
+   color: white;
+    padding:40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    background-color: rgb(7, 7, 100);
+    letter-spacing: 0.5px;
+    /* background-color:lavender; */
+}
+a{
+    font-size: large;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+   }
+  

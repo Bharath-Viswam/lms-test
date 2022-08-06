@@ -1,0 +1,47 @@
+<app-adm-nav></app-adm-nav>
+<app-admin-stu-nav></app-admin-stu-nav>
+<!-- admin student details in admin -->
+<h1 style="text-align:center;">Enrolled FSD002 Batch Student List</h1>
+
+<div style="margin-top: 50px;" class="col-lg-12 container-fluid">
+        <div class="table-responsive table-bordered">
+            <table class="table table-hover">
+                <thead style="text-align:center;">
+                    <tr class="table-primary" >
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Qualification</th>
+                        <th>Course</th>
+                        <th>Date of entrollment</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody  style="text-align:center;">
+                    <tr *ngFor="let student of students">
+                                 <td>{{student.studentname}}</td>
+                                 <td>{{student.studentaddress}}</td>
+                                 <td>{{student.studentemail}}</td>
+                                 <td>{{student.studentph}}</td>
+                                 <td>{{student.studentedu}}</td>
+                                 <td>{{student.stucours}}</td>
+                                 <td>{{student.studate}}</td>
+                                 <td>
+                                    <td>
+                                        <button class="btn btn-warning" (click)="editStudent(student)">Edit</button>
+                                    </td> 
+                                    <td>
+                                       <button class="btn btn-danger" (click)="deleteStudent(student)">Delete</button>
+                                   </td>        
+                    </tr>
+                </tbody>
+             </table>
+             <div *ngIf="nodata"  class="alert alert-info" role="alert">
+                There Is No Entrolled Student To Display. 
+                </div>
+             </div>  
+            </div>
+

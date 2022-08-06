@@ -1,0 +1,26 @@
+<br>
+<br>
+<div class="container bg-light py-5">
+    <h1 class="display-5 fw-bold">Welcome to HTML/CSS Exam</h1>
+    <p class="col-md-8 fs-4">This test will consist total of 10 questions.Each question holds 1 points</p>
+    <h4>
+        Rules:
+    </h4>
+    <ol>
+        <li>Correct question carry 1 points.</li>
+        <li>
+            You will have 60sec to answer each question.
+        </li>
+        </ol>
+        <div class="name col-md-4 my-3">
+            <label for="">Enter your name:</label>
+                <input #name type="text" class="form-control">
+                <label for="">Enter your course:</label>
+                <input #course type="text" class="form-control">
+
+
+            
+        </div>
+       <button class="btn btn-primary btn-lg" routerLink="/student/exam/question1" (click)="startQuiz()">Start</button>
+   
+</div>

@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page">Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/addcsalearmat">Add Material</a>
+          </li>
+         </ul>
+        </div>
+    </div>
+  </nav>
+
+  <h1>LEARNING MATERIALS</h1>
+ <!-- get learning materials -->
+ 
+
+
+ <div class="card">
+   <div class="card-body">
+       <div class="table-responsive table-bordered">
+           <table class="table table-hover">
+               <thead>
+                   <tr class="table-danger" >
+                      
+                       <th>TITLE</th>
+                       <th>URL</th>
+                       <th>Material</th>
+                       <th>Description</th>
+                   </tr>
+               </thead>
+               <tbody>
+                  
+                     <tr *ngFor="let material of materials">
+                                <td>{{material.title}}</td>
+                                <td><a href="{{material.url}}">{{material.url}}</a> </td>
+                               
+                                <td><a href="../../../../assets/uploads/{{material.file}}"> {{material.file}}</a></td>
+                                <td>{{material.desc}}</td>
+                                 </tr>   
+                                  
+                
+               </tbody>
+            </table>
+            </div>  
+   </div>
+</div>

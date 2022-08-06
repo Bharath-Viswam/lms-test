@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Responsive Meta Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>LMS</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,900" rel="stylesheet">
+  <!-- Adding Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Adding Bootstrap CDN and external CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- Adding CSS -->
+</head>
+
+<body>
+  <!-- Main Section -->
+  <section id="main">
+
+    <div class="container">
+      <!-- Navbar Here -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-transparent pt-5">
+        <a href="#" class="navbar-brand logo">ICTAK's LMS</a>
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a routerLink="" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/courses" class="nav-link">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/tralogin">Login</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row header-main">
+
+        <div class="col-md-6">
+          <h1 class="header-info">Build your Career with us</h1>
+          <button class="btn btn-dark btn-lg btn-space" style='margin-right:16px' routerLink="/courses">
+            Explore</button>
+          <button class="btn btn-dark btn-lg btn-space" style='margin-right:16px' routerLink="/stureg">Student
+            Register</button>
+        </div>
+
+        <div class="col-md-6 text-center">
+          <!-- <img src="" class="ml-5 iphone-mock" width="300" alt="iPhone Image"> -->
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Overview Section -->
+  <section id="overview">
+    <h2 class="text-center section-title">Overview</h2>
+
+    <div class="container-fluid">
+      <div class="row overview-row">
+
+        <div class="col-md-4 text-center">
+          <i class="far fa-object-group overview-icon"></i>
+          <h3 class="overview-header">Dedicated Team</h3>
+          <p class="info-width mx-auto">We stay on top of the current trend and always stay ahead</p>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <i class="fas fa-cogs overview-icon"></i>
+          <h3 class="overview-header">Fully Digitalized</h3>
+          <p class="info-width mx-auto">Courses are fully digitilized to your needs and Our Talented Team will be with
+            you in every step of the way</p>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <i class="fas fa-phone overview-icon"></i>
+          <h3 class="overview-header">24/7 Support</h3>
+          <p class="info-width mx-auto">We provide 24/7 support with our Amazing Training Team</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section id="testimonials">
+    <h2 class="text-center text-white section-title">Testimonials</h2>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- Carousel Here -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <h3 class="text-white">Highly Recommend ICTAK They Built my Passion towards Web development</h3>
+              <p class="text-white">-- Bharath Viswam, Kollam, Placed at Infosys</p>
+            </div>
+
+            <div class="carousel-item">
+              <h3 class="text-white">Everyone in the Training Team were very helpful </h3>
+              <p class="text-white">-- Sruthi, Kannur, Placed at Tata Elxsi</p>
+            </div>
+
+            <div class="carousel-item">
+              <h3 class="text-white">They made me a wonderful Full stack developer</h3>
+              <p class="text-white">-- Meenu, Trivandrum, Placed at UST Global</p>
+            </div>
+
+          </div>
+
+          <!-- Left and right controls of Carousel -->
+          <a class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Courses -->
+  <section id="pricing">
+    <h2 class="text-center section-title pricing-title">Courses we offer</h2>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h2 class="card-title text-muted">Certified MEAN Stack Development</h2>
+              <h1 class="card-title pricing-text"><i class="fas fa-rupee-sign"></i>25000</h1>
+              <p class="card-text">Salary Upto 10LPA</p>
+              <p class="card-text">100+ Placed</p>
+              <!-- <p class="card-text">3 Design Template</p> -->
+              <button class="btn btn-dark btn-block" routerLink="/stureg">Join Us</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h2 class="card-title text-muted">Data Science Certification</h2>
+              <h1 class="card-title pricing-text"><i class="fas fa-rupee-sign"></i>23000</h1>
+              <p class="card-text">Salary Upto 15LPA</p>
+              <p class="card-text">75+ Placed</p>
+              <!-- <p class="card-text">5 Design Template</p> -->
+              <button class="btn btn-dark btn-block" routerLink="/stureg">Join Us</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h2 class="card-title text-muted">Certified Specialist in Cyber Security</h2>
+              <h1 class="card-title pricing-text"><i class="fas fa-rupee-sign"></i>18000</h1>
+              <p class="card-text">Salary Upto 8LPA</p>
+              <p class="card-text">60+ Placed</p>
+              <!-- <p class="card-text">Unlimited Design Template</p> -->
+              <button class="btn btn-dark btn-block" routerLink="/stureg">Join Us</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta">
+    <h1 class="text-center cta-text">Start learning from the best</h1>
+    <h3>"Technology will never replace great teachers, But technology in the hands of great teachers is
+      transformational"</h3>
+    <div class="btn-section text-center">
+      <!-- <button class="btn btn-dark btn-lg btn-space"><i class="fab fa-google-play"></i> Download</button>
+      <button class="btn btn-outline-light btn-lg btn-space"><i class="fab fa-apple"></i> Download</button> -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer" class="d-flex justify-content-center">
+    <i class="fab fa-facebook-f footer-icon"></i>
+    <i class="fab fa-instagram footer-icon"></i>
+    <i class="fab fa-twitter footer-icon"></i>
+  </section>
+
+  <!-- Bootstrap's Javascript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+  <!-- Contact us -->
+
+  <section class="contact_us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="contact_inner">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="contact_form_inner">
+                  <div class="contact_field">
+                    <h3>Contact Us</h3>
+                    <p>Feel Free to contact us any time. We will get back to you as soon as we can!.</p>
+                    <input type="text" class="form-control form-group" placeholder="Name" />
+                    <input type="text" class="form-control form-group" placeholder="Email" />
+                    <textarea class="form-control form-group" placeholder="Message"></textarea>
+                    <button class="contact_form_submit">Send</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="right_conatct_social_icon d-flex align-items-end">
+                  <div class="socil_item_inner d-flex">
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact_info_sec">
+              <h4>Contact Info</h4>
+              <div class="d-flex info_single align-items-center">
+                <i class="fas fa-headset"></i>
+                <span>0471-2700811/12/13</span>
+              </div>
+              <div class="d-flex info_single align-items-center">
+                <i class="fas fa-envelope-open-text"></i>
+                <span>info@ictkerala.org</span>
+              </div>
+              <div class="d-flex info_single align-items-center">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>ICT Academy of Kerala L-9, Thejaswini Building Technopark campus Karyavattom-695581</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>

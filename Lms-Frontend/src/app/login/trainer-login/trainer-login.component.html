@@ -1,0 +1,58 @@
+<div class="back">
+  <img class="img-fluid" [src]="image"  ></div>
+  <div class="top">
+    <h1>LMS</h1>
+    <h3>Your gateway to success</h3>
+  </div>
+<div class="login">
+    <form  #traLogin="ngForm" (ngSubmit)="trainerLogin()">
+      <h1 class="title mb-3 fw-normal">Welcome Trainer</h1>
+      <div class="mb-3 form-group">
+        <input type="email" 
+        class="form-control"
+         id="traineremail"
+         name="traineremail"
+         [(ngModel)]="Trainer.traineremail"
+         #traineremail="ngModel"
+         [class.is-invalid]="traineremail.invalid && traineremail.touched"
+         minlength="6"
+         placeholder="Email Id"
+         required>
+         <!-- email validation -->
+         <small class="text-danger"   *ngIf="traineremail.touched && !traineremail.valid">
+          <div *ngIf="traineremail.errors?.['required']">
+            Email Is Required
+              </div>
+          <div *ngIf="traineremail.errors?.['pattern']">
+               Enter valid email address
+              </div></small>
+      </div>
+     <!-- password -->
+      <div class="mb-3 form-group">
+        <input type="password" 
+        class="form-control"
+         id="trainerpwd"
+         name="trainerpwd"
+             [(ngModel)]="Trainer.trainerpwd"
+             #trainerpwd="ngModel"
+           minlength="6"
+              [class.is-invalid]="trainerpwd.invalid && trainerpwd.touched"
+             placeholder="Password"
+             required>
+             <!-- password validation -->
+             <small class="text-danger"   *ngIf="trainerpwd.touched && !trainerpwd.valid">
+              <div *ngIf="trainerpwd.errors?.['required']">
+                Password is required
+                  </div>
+              <div *ngIf="trainerpwd.errors?.['pattern']">
+                   Enter valid password
+                  </div></small>
+      </div>
+     
+      <div class="d-grid">
+        <button type="submit" class="btn  btn-primary" [disabled]="traLogin.form.invalid">LOGIN</button>
+      </div>
+      <br>
+              <a routerLink="/trareg">Not a member? Signup</a>
+      </form>
+    </div>

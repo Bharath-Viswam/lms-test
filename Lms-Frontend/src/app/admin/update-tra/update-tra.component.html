@@ -1,0 +1,103 @@
+<div class="back">
+  <img class="img-fluid img" [src]="image">
+ 
+<div>
+    <h1>Edit Trainer Profile </h1>
+     <div class="all">
+       <form  #traEdit="ngForm"  (ngSubmit)="editTrainerprof()">
+           
+           <!-- body -->
+               <div class="card-body">
+                 <div class="table-responsive table-bordered">
+                     <table class="table">
+                         <tbody>
+                            
+                           <tr>
+                               <td><label>Name</label></td>
+                              
+                               <td><input type="text" name="t_Name"  #trainername="ngModel"  [style.width.px]=600 [(ngModel)]=" trainerItem.trainername"
+                                required
+                                pattern="[A-Za-z\s]{2,15}" >
+                                 <small class="text-danger" [class.d-none]="trainername.valid || trainername.untouched">ender valid name</small>
+                             </td> 
+                            
+                             </tr>
+                             <tr>
+                               <td><label>Address</label></td>
+                               <td><input type="text" name="t_Address"
+                                #traineraddress="ngModel"
+                                  [style.width.px]=600 [(ngModel)]="trainerItem.traineraddress"
+                                  [class.is-invalid]="traineraddress.invalid && traineraddress.touched"
+                                  pattern="[A-Za-z\s0-9,.()]{2,200}"
+                                    required>
+                                    <small class="text-danger" [class.d-none]="traineraddress.valid || traineraddress.untouched">Ender valid address</small></td>
+                                    
+                             </tr>
+                             
+                             <tr>
+                               <td><label>Phone No</label></td>
+                               <td><input type="text" name="t_ph"  #trainerph="ngModel"
+                                 [class.is-invalid]="trainerph.invalid && trainerph.touched"
+                               pattern="[0-9\s]{10,10}"
+                               required [style.width.px]=600 [(ngModel)]=" trainerItem.trainerph">
+                               <small class="text-danger" [class.d-none]="trainerph.valid || trainerph.untouched"> Ender valid phnumber</small></td>
+                             </tr>
+                             <tr>
+                                 <td><label>Highest Qualiication</label></td>
+                                 <td><input type="text" name="t_edu" #traineredu="ngModel" [style.width.px]=600 [(ngModel)]=" trainerItem.traineredu"
+                                     [class.is-invalid]="traineredu.invalid && traineredu.touched"
+                                      pattern="[A-Za-z\s0-9\+.]{2,25}"
+                                     required>
+                                     <small class="text-danger" [class.d-none]="traineredu.valid || traineredu.untouched">Enter valid qualification</small></td>
+                               </tr>
+                               <tr>
+                                <td><label>SkillS</label></td>
+                                <td><input type="text" name="t_skill" #trainerskill="ngModel" [style.width.px]=600 [(ngModel)]=" trainerItem.trainerskill"
+                                    [class.is-invalid]="trainerskill.invalid && trainerskill.touched"
+                                    required>
+                                    <small class="text-danger" [class.d-none]="trainerskill.valid || trainerskill.untouched">Enter valid skills</small></td>
+                              </tr>
+                              <tr>
+                                <td><label>Teaching Expeience</label></td>
+                                <td><input type="text" name="t_exp" #trainerexp="ngModel" [style.width.px]=600 [(ngModel)]=" trainerItem.trainerexp"
+                                    [class.is-invalid]="trainerexp.invalid && trainerexp.touched"
+                                     pattern="[A-Za-z\s+.]{2,25}"
+                                    required>
+                                    <small class="text-danger" [class.d-none]="trainerexp.valid || trainerexp.untouched">Enter valid experience</small></td>
+                              </tr>
+                              <tr>
+                                <td><label>Course Teaching</label></td>
+                                <td><input type="text" name="t_corse" #tracours="ngModel" [style.width.px]=600 [(ngModel)]=" trainerItem. tracours"
+                                    [class.is-invalid]="  tracours.invalid &&   tracours.touched"
+                                    required>
+                                    <small class="text-danger" [class.d-none]="tracours.valid ||  tracours.untouched">Enter valid course</small></td>
+                              </tr>
+                             <td></td>
+                              <tr>
+                                <td><label>Course Id</label></td>
+                                <td><input type="text" name="t_coid" #tracouid="ngModel" [style.width.px]=600 [(ngModel)]=" trainerItem. tracouid"
+                                    [class.is-invalid]=" tracouid.invalid &&  tracouid.touched"
+                                    minlength="3"
+                                    required>
+                                    <small class="text-danger" [class.d-none]=" tracouid.valid || tracouid.untouched">Enter valid batch id</small></td>
+                              </tr>
+                              <tr>
+                                <td><label>Batch Id</label></td>
+                                <td><input type="text" name="t_baid" #tracoubtch="ngModel" [style.width.px]=600 [(ngModel)]=" trainerItem.tracoubtch">
+                                    <!-- <small class="text-danger" [class.d-none]="tracoubtch.valid || tracoubtch.untouched">Enter valid batch id</small></td> -->
+                              </tr>
+                             <td></td>
+                             
+                             <button class="btn btn-success btn-lg" [style.width.px]=530 type="submit" >Update</button>
+                         
+                           </tbody>
+                     </table>
+                 </div>
+               </div>
+   
+   
+   
+       </form>
+     </div>
+  </div>
+</div>
